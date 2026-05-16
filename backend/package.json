@@ -1,0 +1,43 @@
+{
+  "name": "smart-leads-backend",
+  "version": "1.0.0",
+  "description": "Backend API for the Smart Leads Dashboard internship assignment.",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "npm run seed && ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/seed.js && node dist/server.js",
+    "seed": "npm run build && node dist/seed.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mern",
+    "express",
+    "typescript",
+    "mongoose",
+    "leads"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.10.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  }
+}
